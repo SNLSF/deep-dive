@@ -1,3 +1,15 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cover-medium {
+	height: 200px;
+}
+
+.title {
+	text-decoration: underline;
+}
+
+.author {
+	font-style: italic;
+}
