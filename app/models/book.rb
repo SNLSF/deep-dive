@@ -1,4 +1,3 @@
 class Book < ActiveRecord::Base
-	has_many :authorships
-	has_many :influencers, through: :authorships
+	has_and_belongs_to_many :influencers
 end

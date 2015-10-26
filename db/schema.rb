@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025233728) do
+ActiveRecord::Schema.define(version: 20151026025257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "authorships", force: :cascade do |t|
-    t.integer  "influencer_id"
-    t.integer  "book_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "authorships", ["book_id"], name: "index_authorships_on_book_id", using: :btree
-  add_index "authorships", ["influencer_id"], name: "index_authorships_on_influencer_id", using: :btree
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -33,6 +23,14 @@ ActiveRecord::Schema.define(version: 20151025233728) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "books_influencers", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "influencer_id"
+  end
+
+  add_index "books_influencers", ["book_id"], name: "index_books_influencers_on_book_id", using: :btree
+  add_index "books_influencers", ["influencer_id"], name: "index_books_influencers_on_influencer_id", using: :btree
 
   create_table "events", force: :cascade do |t|
     t.string   "date"

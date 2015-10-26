@@ -1,5 +1,4 @@
 class Influencer < ActiveRecord::Base
 	has_many :quotes
-	has_many :authorships
-	has_many :books, through: :authorships
+	has_and_belongs_to_many :books
 end

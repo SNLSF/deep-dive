@@ -3,13 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .cover-medium {
-	height: 200px;
+	height: $medium;
 }
 
 .title {
 	text-decoration: underline;
 }
 
-.author {
-	font-style: italic;
+.books-carousel {
+	&.cover {
+		height: $medium;
+	}
+	&.title {
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
 }

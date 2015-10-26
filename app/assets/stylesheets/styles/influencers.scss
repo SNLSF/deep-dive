@@ -3,5 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .portrait-medium {
-	height: 200px;
+	height: $medium;
+}
+
+.influencers-carousel {
+	&.portrait {
+		height: $medium;
+	}
+	&.name {
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+	&.quote {
+		font-style: italic;
+	}
 }
