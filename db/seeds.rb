@@ -8,7 +8,6 @@
 
 
 
-# shovel authors here?
 books = [
 	[{title: "The XX Factor"},
 	 {date: "2013"},
@@ -121,6 +120,24 @@ influencers = [
 influencers.each do |x|
 	Influencer.create(name: x[0][:name], author: x[1][:author], image: x[2][:image])
 end
+
+Book.find(1).influencers << Influencer.find(1)
+Book.find(2).influencers << Influencer.find(2)
+Book.find(3).influencers << [Influencer.find(3),
+														 Influencer.find(4),
+														 Influencer.find(5),
+														 Influencer.find(6)]
+Book.find(4).influencers << [Influencer.find(7),
+ 														 Influencer.find(8), 
+ 														 Influencer.find(9)]
+Book.find(5).influencers << Influencer.find(10)
+Book.find(6).influencers << Influencer.find(11)
+Book.find(7).influencers << Influencer.find(12)
+Book.find(8).influencers << Influencer.find(13)
+Book.find(9).influencers << Influencer.find(14)
+Book.find(10).influencers << Influencer.find(15)
+Book.find(11).influencers << Influencer.find(16)
+Book.find(12).influencers << Influencer.find(17)
 
 quotes = []
 events = []

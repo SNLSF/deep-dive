@@ -1,8 +1,13 @@
 class WelcomeController < ApplicationController
 
 	def index
-		@currently_reading = Authorship.find(1)
-		@current_book = Book.find(@currently_reading.book_id)
-		@current_influencers = Influencer.find(@currently_reading.influencer_id)
+		@current_book = Book.find(3)
+		@current_influencers = @current_book.influencers
+		p "*" * 50
+		p @current_book.title
+		p @current_book.image
+		p @current_book.date
+		p @current_book.influencers
+
 	end
 end

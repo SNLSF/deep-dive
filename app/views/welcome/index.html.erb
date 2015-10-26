@@ -20,10 +20,14 @@
 			</div>
 			<div class="small-4 columns text-center">
 				<span class="title"><%= @current_book.title %></span><br>
-				by <%= @current_influencers.name %>
+				by <% @current_influencers.each do |influencer| %>
+					<%= influencer.name %><br>
+					<% end %>
 			</div>
 			<div class="small-4 columns text-center">
-				<img src="<%= @current_influencers.image %>" alt="Author Photo" class="portrait-medium">
+				<% @current_influencers.each do |influencer| %>
+					<img src="<%= influencer.image %>" alt="Author Photo" class="portrait-medium">
+				<% end %>
 			</div>
 		</div>
 	</div>
