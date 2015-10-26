@@ -24,11 +24,11 @@
 					<%= influencer.name %><br>
 					<% end %>
 			</div>
-			<div class="small-4 columns text-center">
-				<% @current_influencers.each do |influencer| %>
+			<% @current_influencers.each do |influencer| %>
+				<div class="small-4 columns text-center">
 					<img src="<%= influencer.image %>" alt="Author Photo" class="portrait-medium">
-				<% end %>
-			</div>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </section>
@@ -36,6 +36,27 @@
 <section>
 	<div class="row">
 		<h3 class="small-12 columns text-center">The Influencers</h3>
+	</div>
+	<div class="row">
+		<% @influencers[0..5].each do |influencer| %>
+			<div class="small-2 columns">
+				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<% @influencers[6..11].each do |influencer| %>
+			<div class="small-2 columns">
+				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<% @influencers[12..-1].each do |influencer| %>
+			<div class="small-2 columns">
+				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
+			</div>
+		<% end %>
 	</div>
 </section>
 <!-- SIMPLE GRID -->
@@ -46,8 +67,24 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 columns">
-			<img src="<%= @current_book.image %>" alt="Book Cover" class="cover-medium">
-		</div>
+		<% @books[0..3].each do |book| %>
+			<div class="small-3 columns">
+				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<% @books[4..7].each do |book| %>
+			<div class="small-3 columns">
+				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<% @books[8..12].each do |book| %>
+			<div class="small-3 columns">
+				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
+			</div>
+		<% end %>
 	</div>
 </section>
