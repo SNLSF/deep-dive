@@ -11,24 +11,20 @@
 </header>
 <section>
 	<div class="row">
-		<h3 class="small-12 columns text-center">
-				I'm currently reading...
-		</h3>
-		<div class="row">
-			<div class="small-4 columns text-center">
-				<img src="<%= @current_book.image %>" alt="Book Cover" class="cover-medium">
-			</div>
-			<div class="small-4 columns text-center">
-				<span class="title"><%= @current_book.title %></span><br>
-				by <% @current_influencers.each do |influencer| %>
+		<div class="small-5 columns">
+			<h3>
+				I'm currently reading...<br>
+				<span class="title"><%= @current_book.title %></span>
+			</h3>
+			<p>
+				by 
+				<% @current_influencers.each do |influencer| %>
 					<%= influencer.name %><br>
-					<% end %>
-			</div>
-			<% @current_influencers.each do |influencer| %>
-				<div class="small-4 columns text-center">
-					<img src="<%= influencer.image %>" alt="Author Photo" class="portrait-medium">
-				</div>
-			<% end %>
+				<% end %>
+			</p>
+		</div>
+		<div class="small-7 columns">
+			<img src="<%= @current_book.image %>" alt="Book Cover" class="cover-medium">
 		</div>
 	</div>
 </section>
@@ -38,27 +34,21 @@
 		<h3 class="small-12 columns text-center">The Influencers</h3>
 	</div>
 	<div class="row">
-		<% @influencers[0..5].each do |influencer| %>
-			<div class="small-2 columns">
-				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
+		<div class="small-12 columns">
+			<div class="wrap">
+				<% @influencers.each do |influencer| %>
+					<div class="box">
+				    <div class="boxInner">
+				      <img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium"/>
+				      <div class="titleBox"><%= influencer.name %></div>
+				    </div>
+				  </div>
+				<% end %>
 			</div>
-		<% end %>
-	</div>
-	<div class="row">
-		<% @influencers[6..11].each do |influencer| %>
-			<div class="small-2 columns">
-				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
-			</div>
-		<% end %>
-	</div>
-	<div class="row">
-		<% @influencers[12..-1].each do |influencer| %>
-			<div class="small-2 columns">
-				<img src="<%= influencer.image %>" alt="Author Portrait" class="cover-medium">
-			</div>
-		<% end %>
+		</div>
 	</div>
 </section>
+
 <!-- SIMPLE GRID -->
 <section>
 	<div class="row">
@@ -67,24 +57,22 @@
 		</div>
 	</div>
 	<div class="row">
-		<% @books[0..3].each do |book| %>
-			<div class="small-3 columns">
-				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
-			</div>
-		<% end %>
-	</div>
-	<div class="row">
-		<% @books[4..7].each do |book| %>
-			<div class="small-3 columns">
-				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
-			</div>
-		<% end %>
-	</div>
-	<div class="row">
-		<% @books[8..12].each do |book| %>
-			<div class="small-3 columns">
-				<img src="<%= book.image %>" alt="Book Cover" class="cover-medium">
-			</div>
-		<% end %>
+		<div class="small-1 columns">
+			<i class="previous fa fa-angle-left fa-5x"></i>
+		</div>
+		<div class="small-10 columns">
+				<% @books.each do |book| %>
+					<div class="book-cover">
+						<img src="<%= book.image %>" alt="Book Cover" class="book cover-medium">
+					</div>
+					<div class="book-blurb">
+						<span class="quote">"This will be a quote from the book that will be top row."</span><br>
+						<a href="/book/<%=book.id%>">My thoughts on <%= book.title %></a>
+					</div>
+				<% end %>
+		</div>
+		<div class="small-1 columns">
+			<i class="next fa fa-angle-right fa-5x"></i>
+		</div>
 	</div>
 </section>
