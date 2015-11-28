@@ -2,3 +2,26 @@
 	font-weight: bold;
 	text-decoration: underline;
 }
+
+.book__author {
+	font-style: italic;
+}
+
+.influencer-grid {
+	width: 100%;
+	.influencer-grid__tile {
+		position: relative;
+		display: inline-block;
+		width: 29%;
+		height: 300px;
+		overflow: hidden;
+		margin: 2%;
+	}
+	.influencer-grid__portrait {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+	}
+}
