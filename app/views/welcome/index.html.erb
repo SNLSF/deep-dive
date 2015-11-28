@@ -1,30 +1,21 @@
 <header>
 	<div class="row">
-		<h1 class="small-12 text-center columns">Women.</h1>
-	</div>
-	<div class="row">
-		<h2 class="small-3 text-center columns">Feminism</h2>
-		<h2 class="small-3 text-center columns">Race</h2>
-		<h2 class="small-3 text-center columns">History</h2>
-		<h2 class="small-3 text-center columns">Pop Culture</h2>
+		<h1 class="small-12 text-center columns">WOMEN</h1>
 	</div>
 </header>
 <section>
 	<div class="row">
-		<div class="small-5 columns">
-			<h3>
-				I'm currently reading...<br>
-				<span class="title"><%= @current_book.title %></span>
-			</h3>
+		<div class="small-6 columns">
+			I'm currently reading...
+		</div>
+		<div class="small-6 columns">
+			<span class="book__title"><%= @current_book.title %></span>
 			<p>
 				by 
 				<% @current_influencers.each do |influencer| %>
 					<%= influencer.name %><br>
 				<% end %>
 			</p>
-		</div>
-		<div class="small-7 columns">
-			<img src="<%= @current_book.image %>" alt="Book Cover" class="cover-medium">
 		</div>
 	</div>
 </section>

@@ -1,4 +1,11 @@
-@import "foundation";
-@import "base/normalize.scss";
+/*
+*= require foundation 
+*= require_self 
+*/
+
+
 @import "base/globals.scss";
+@import "base/normalize.scss";
+@import "foundation_and_overrides";
+@import "application.scss";
 @import "styles/_welcome.scss";

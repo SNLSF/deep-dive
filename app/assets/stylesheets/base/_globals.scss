@@ -1,23 +1,11 @@
-$small: 100px;
-$medium: 200px;
-$large: 300px;
+$hotpink: #F56AD6;
+$pink: #FF5E8F;
+$green: #6AD77F;
+$yellow: #E2F359;
+$peach: #FFD2BF;
+$brown: #4C3F39;
 
-$main: #FFFFFF;
+$white: #FFFFFF;
 
-
-body {
-	background: $main;
-}
-
-header {
-	padding: 60px 0;
-}
-section {
-	padding: 20px 0;
-	margin: 0;
-}
-
-/* HELPER CLASSES */
-.text-center {
-	text-align: center;
-}
+$headerFont: 'Montserrat', sans-serif;
+$bodyFont: 'Lato', sans-serif;
