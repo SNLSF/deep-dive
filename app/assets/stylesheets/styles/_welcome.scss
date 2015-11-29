@@ -41,13 +41,42 @@
 
 }
 
+.book-carousel {
+	border: solid 1px red;
+	white-space: nowrap;
+	
+	.next, .previous {
+		width: 50px;
+	}
+	
+	.slide { 
+		border: solid 1px red; 
+		display: inline-block;
+	}
+	
+	.book-carousel__cover { 
+		border: solid 1px red; 
+		width: auto;
+		height: 250px;
+		display: inline-block;
+	}
+	
+	.book-carousel__blurb { 
+		border: solid 1px red; 
+		display: inline-block;
+		width: 230px;
+		white-space: normal;
+		margin: 10px;
+	}
+}
+
 // SECTIONS
 ///////////
 
 section {
 	&.reading {
 		min-height: 400px;
-		background: url("book-2.png") no-repeat center bottom;
-		background-size: contain;
+		background: url("book-1.jpeg") no-repeat center bottom;
+		background-size: cover;
 	}
 }

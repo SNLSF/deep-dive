@@ -1,6 +1,6 @@
 <header>
 	<div class="row">
-		<h1 class="small-12 text-center columns">WOMEN</h1>
+		<h1 class="small-12 text-center columns">WOMEN'S STUDIES</h1>
 	</div>
 </header>
 <section class="reading">
@@ -33,30 +33,23 @@
 		</div>
 	</div>
 </section>
-<!-- SIMPLE GRID -->
 <section>
 	<div class="row">
-		<div class="small-12 columns text-center">
+		<div class="small-12 columns">
 			<h3>The Library</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="small-1 columns">
-			<i class="previous fa fa-angle-left fa-5x"></i>
-		</div>
-		<div class="small-10 columns">
+			<div class="book-carousel" data-equalizer>
+				<i class="previous fa fa-angle-left fa-5x"></i>
 				<% @books.each do |book| %>
-					<div class="book-cover">
-						<img src="<%= book.image %>" alt="Book Cover" class="book cover-medium">
-					</div>
-					<div class="book-blurb">
-						<span class="quote">"This will be a quote from the book that will be top row."</span><br>
-						<a href="/book/<%=book.id%>">My thoughts on <%= book.title %></a>
+					<div class="slide <%= book.id %>" data-equalizer-watch>
+						<img src="<%= book.image %>" alt="Book Cover" class="book-carousel__cover">
+						<div class="book-carousel__blurb" data-equalizer-watch>
+							<span>"This will be a quote from the book that will be top row."</span><br>
+							<a href="/books/<%=book.id%>">My thoughts on <%= book.title %></a>
+						</div>
 					</div>
 				<% end %>
-		</div>
-		<div class="small-1 columns">
-			<i class="next fa fa-angle-right fa-5x"></i>
+				<i class="next fa fa-angle-right fa-5x"></i>
+			</div>
 		</div>
 	</div>
 </section>

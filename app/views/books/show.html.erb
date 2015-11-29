@@ -1,0 +1,29 @@
+<header class="text-center">
+	<h1><%= @book.title %></h1>
+</header>
+<section>
+	<div class="row">
+		<div class="small-6 columns">
+			<img src="<%= @book.image %>" alt="Book Cover">
+		</div>
+		<div class="small-6 columns">
+			<p>Duis et ex eu libero tincidunt placerat nec at quam. Suspendisse diam orci, laoreet id viverra ut, imperdiet in diam. Ut quis nunc feugiat nibh ultricies accumsan nec in erat. Praesent tincidunt vestibulum interdum. Mauris accumsan posuere massa, non convallis elit. Cras rhoncus magna libero, vel imperdiet leo dapibus id. Nulla id aliquet sem. Cras sollicitudin arcu felis, ut efficitur nunc tincidunt a. Pellentesque egestas faucibus felis, a tempor augue hendrerit eget. Pellentesque viverra rhoncus nisl non pretium. Integer accumsan, quam quis porta tempor, sem mauris malesuada augue, non fermentum dolor diam ac mi.
+
+			Duis in nibh vitae turpis posuere sodales id sit amet orci. Fusce varius quam at justo aliquet interdum. Nulla eleifend sapien in enim ullamcorper elementum. Morbi eu odio sed neque tincidunt accumsan. Morbi ante est, fermentum ut mauris et, commodo hendrerit metus. Nulla dictum aliquet ultrices. Praesent malesuada dictum fringilla.
+
+			Etiam a dolor lorem. Phasellus ligula lacus, volutpat a enim ut, ullamcorper pretium diam. Aliquam porta elementum felis, non ultrices lectus ultrices vel. Morbi fringilla, est eget imperdiet tempor, odio nunc tincidunt nisi, vehicula ornare dui sem non nunc. Integer egestas posuere quam, in mollis orci aliquet nec. Mauris orci purus, faucibus sit amet lacus non, feugiat aliquam ligula. Integer ut libero lacinia, sagittis lorem eu, dignissim tellus. Fusce odio ipsum, sodales at tristique id, ultricies sit amet felis. Pellentesque sed scelerisque purus. Duis mollis, nisi eget tincidunt tristique, dui ex ullamcorper nulla, ac dapibus libero lacus et augue. Donec efficitur viverra sollicitudin. Donec in lacus et purus pulvinar pellentesque vel in ex. Sed laoreet dictum tempus. Sed fermentum eleifend elementum. Proin at massa feugiat, ullamcorper quam ut, semper metus. Aliquam ut mattis neque, at ullamcorper elit.</p>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<p>
+				<% @influencers.each do |influencer| %>
+					<span><%= influencer.name %></span><br>
+					<img src="<%= influencer.image %>" alt="Author Portrait" />
+				<% end %>
+			</p>
+		</div>
+	</div>
+</section>
