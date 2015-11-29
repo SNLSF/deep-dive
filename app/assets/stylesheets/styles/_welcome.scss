@@ -9,19 +9,45 @@
 
 .influencer-grid {
 	width: 100%;
+	padding-left: 50px;
+	
 	.influencer-grid__tile {
 		position: relative;
 		display: inline-block;
-		width: 29%;
+		width: 275px;
 		height: 300px;
 		overflow: hidden;
-		margin: 2%;
+		margin: 10px;
 	}
+
 	.influencer-grid__portrait {
 		position: absolute;
 		top: 0;
 		left: 0;
 		min-height: 100%;
 		min-width: 100%;
+	}
+	
+	.influencer-grid__bio {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		background-color: $transparentHotPink;
+		width: 100%;
+		padding: 10px;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+}
+
+// SECTIONS
+///////////
+
+section {
+	&.reading {
+		min-height: 400px;
+		background: url("book-2.png") no-repeat center bottom;
+		background-size: contain;
 	}
 }

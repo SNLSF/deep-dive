@@ -1,6 +1,6 @@
 body {
 	font-family: $bodyFont;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 header {
@@ -10,6 +10,13 @@ header {
 section {
 	padding: 60px 0;
 	margin: 0;
+	&:nth-child(odd) {
+		background: $white
+	}
+	&:nth-child(even) {
+		background: $gray;
+	}
+
 }
 
 h1, h2, h3, h4 {
@@ -19,6 +26,7 @@ h1, h2, h3, h4 {
 h1 {
 	font-size: 72px;
 	color: $peach;
+	@include animation(changeAndFadeColors 6s infinite);
 }
 
 
@@ -29,5 +37,21 @@ h1 {
 	text-align: center;
 }
 
-.vertical-align {}
+.hide {
+	display: none !important;
+}
+
+// ANIMATION KEYFRAMES
+//////////////////////
+
+@include keyframes(changeAndFadeColors) {
+	0% { color: $hotpink; }
+	25% { color: $pink; }
+	50% { color: $peach; }
+	75% { color: $yellow; }
+	100% { color: $bluegreen; }
+}
+
+
+
 

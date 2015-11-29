@@ -3,13 +3,11 @@
 		<h1 class="small-12 text-center columns">WOMEN</h1>
 	</div>
 </header>
-<section>
-	<div class="row">
-		<div class="small-6 columns">
-			I'm currently reading...
-		</div>
-		<div class="small-6 columns">
-			<span class="book__title"><%= @current_book.title %></span>
+<section class="reading">
+	<div class="row text-center">
+		<div class="small-12 columns">
+			I'm currently reading...<br>
+			<span class="book__title"><%= @current_book.title %></span><br>
 			<p>
 				by 
 				<% @current_influencers.each do |influencer| %>
@@ -19,21 +17,22 @@
 		</div>
 	</div>
 </section>
-<!-- CAROUSEL WITH QUOTES -->
+<!-- ADD BIO AND QUTOES -->
 <section>
 	<div class="row">
 		<h3 class="small-12 columns text-center">The Influencers</h3>
 	</div>
 	<div class="row">
-		<!-- <ul class="small-block-grid-2 large-block-grid-4 influencer-grid"> -->
 		<div class="influencer-grid">
 			<% @influencers.each do |influencer| %>
-		      <div class="influencer-grid__tile"><img src="<%= influencer.image %>" alt="Author Portrait" class="influencer-grid__portrait" /></div>
+		      <div class="influencer-grid__tile">
+		      	<img src="<%= influencer.image %>" alt="Author Portrait" class="influencer-grid__portrait" />
+		      	<div class="hide influencer-grid__bio text-center"><%= influencer.name %></div>
+		      </div>
 			<% end %>
 		</div>
 	</div>
 </section>
-
 <!-- SIMPLE GRID -->
 <section>
 	<div class="row">
