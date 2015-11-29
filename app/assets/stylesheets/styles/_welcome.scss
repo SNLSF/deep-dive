@@ -42,32 +42,56 @@
 }
 
 .book-carousel {
-	border: solid 1px red;
 	white-space: nowrap;
 	
-	.next, .previous {
+	.next-icon, .previous-icon {
 		width: 50px;
+		color: $white;
 	}
-	
+
 	.slide { 
-		border: solid 1px red; 
-		display: inline-block;
+		background-color: $transparentWhite;
+		margin: 0 10px;
+		width: 85%;
+		height: 270px;
+		padding: 10px;
+		display: none;
+		&:nth-of-type(1) {
+			display: inline-block;
+		};
 	}
 	
 	.book-carousel__cover { 
-		border: solid 1px red; 
 		width: auto;
 		height: 250px;
 		display: inline-block;
 	}
 	
 	.book-carousel__blurb { 
-		border: solid 1px red; 
 		display: inline-block;
-		width: 230px;
+		width: 70%;
 		white-space: normal;
 		margin: 10px;
+		padding: 1%;
 	}
+
+	.book-carousel__nav {
+		width: 100%;
+		display: block;
+		list-style: none;
+		.book-carousel__nav__dot {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: inline-block;
+			margin: 5px;
+			border: solid 1px $white;
+			.is-selected {
+				background-color: $white;
+			}
+		}
+	}
+
 }
 
 // SECTIONS
@@ -75,6 +99,11 @@
 
 section {
 	&.reading {
+		min-height: 400px;
+		/*background: url("book-2.png") no-repeat center bottom;*/
+		/*background-size: contain;*/
+	}
+	&.library {
 		min-height: 400px;
 		background: url("book-1.jpeg") no-repeat center bottom;
 		background-size: cover;
