@@ -100,8 +100,8 @@
 section {
 	&.reading {
 		min-height: 400px;
-		/*background: url("book-2.png") no-repeat center bottom;*/
-		/*background-size: contain;*/
+		background: $gray url("book-2.png") no-repeat center bottom;
+		background-size: contain;
 	}
 	&.library {
 		min-height: 400px;

@@ -9,7 +9,14 @@ header {
 
 footer {
 	padding: 40px 20px;
-	text-align: center
+	> a {
+		text-decoration: none;
+		color: $peach;
+	}
+	/*.creator-credit {*/
+		font-size: 14px;
+		text-transform: uppercase;
+	/*}*/
 }
 
 section {
@@ -30,10 +37,17 @@ h1, h2, h3, h4 {
 
 h1 {
 	font-size: 72px;
+	opacity: .7;
 	color: $peach;
 	@include animation(changeAndFadeColors 20s infinite);
 }
 
+a {
+	color: $bluegreen !important;
+	&:hover {
+		color: $peach !important;
+	};
+}
 
 // HELPER CLASSES 
 /////////////////
@@ -42,8 +56,16 @@ h1 {
 	text-align: center;
 }
 
+.text-right {
+	text-align: right;
+}
+
 .hide {
 	display: none !important;
+}
+
+.block {
+	display: block;
 }
 
 // ANIMATION KEYFRAMES

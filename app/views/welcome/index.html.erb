@@ -3,20 +3,6 @@
 		<h1 class="small-12 text-center columns">WOMEN'S STUDIES</h1>
 	</div>
 </header>
-<section class="reading">
-	<div class="row text-center">
-		<div class="small-12 columns">
-			I'm currently reading...<br>
-			<span class="book__title"><%= @current_book.title %></span><br>
-			<p>
-				by 
-				<% @current_influencers.each do |influencer| %>
-					<span class="book__author"><%= influencer.name %></span><br>
-				<% end %>
-			</p>
-		</div>
-	</div>
-</section>
 <!-- ADD BIO AND QUTOES -->
 <section>
 	<div class="row">
@@ -54,4 +40,15 @@
 		</div>
 	</div>
 </section>
-<footer>Bloggity blah blah</footer>
+<footer>
+	<div class="row">
+		<div class="small-6 columns">
+			<a href="http://coyoteholdings.com/about"><%= image_tag("little-steph.jpg", size: "100") %></a>
+			<span class="block creator-credit">Created by<br>Steph Lopez</span>
+		</div>
+		<div class="small-6 columns text-right">
+			I'm currently reading<br>
+			<span class="book__title"><a href="/books/<%= @current_book.id %>"><%= @current_book.title %></a></span><br>
+		</div>
+	</div>
+</footer>
