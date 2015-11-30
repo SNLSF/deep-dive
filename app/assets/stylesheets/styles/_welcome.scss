@@ -86,9 +86,9 @@
 			display: inline-block;
 			margin: 5px;
 			border: solid 1px $white;
-			.is-selected {
-				background-color: $white;
-			}
+		}
+		.is-selected {
+			background-color: $white;
 		}
 	}
 

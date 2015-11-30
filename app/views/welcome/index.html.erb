@@ -39,15 +39,15 @@
 			<div class="book-carousel text-center">
 				<i class="previous-icon fa fa-angle-left fa-5x"></i>
 				<% @books.each do |book| %>
-					<div class="slide" id="<%= book.id %>">
+					<div class="slide">
 						<a href="/books/<%=book.id%>"><img src="<%= book.image %>" alt="Book Cover" class="book-carousel__cover"></a>
 						<span class="book-carousel__blurb">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere fringilla purus. Nullam leo quam, vestibulum et facilisis ac, placerat ut enim. In vehicula ut sapien id viverra."</span>
 					</div>
 				<% end %>
 				<i class="next-icon fa fa-angle-right fa-5x"></i>
 				<div class="book-carousel__nav">
-					<% @books.length.times do |dot| %>
-						<div class="book-carousel__nav__dot"></div>
+					<% @books.each do |book| %>
+						<div class="book-carousel__nav__dot" id="<%= book.id %>"></div>
 					<% end %>
 				</div>
 			</div>

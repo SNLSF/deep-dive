@@ -41,7 +41,7 @@ books = [
 	 {image: "http://i.imgur.com/mkaIiWb.gif"}], 
 	[{title: "Woman, An Intimate Geography"},
 	 {date: "2014"},
-	 {image: "http://i.imgur.com/mkaIiWb.gif"}], 
+	 {image: "http://i.imgur.com/23UsK8R.jpg"}], 
 	[{title: "Beyond the Pale"},
 	 {date: "1992"},
 	 {image: "http://i.imgur.com/HWA0Zwh.jpg?1"}], 

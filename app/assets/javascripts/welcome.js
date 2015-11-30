@@ -4,40 +4,86 @@ $( document ).ready(function() {
       $(this).find(':nth-child(2)').removeClass('hide');
     }, function() {
       $(this).find(':nth-child(2)').addClass('hide');
-    });
+  });
 
   // Book Carousel
   ////////////////
-
-  var currentSlide = 0;
   var slides = $('.slide');
+  var firstSlideIndex = 0;
+  var lastSlideIndex = $('.slide').length - 1;
+  var currentSlideIndex = 0;
+  var dots = $('.book-carousel__nav__dot');
+
+  function updateActiveDot(direction) {
+    if (direction === "forward" && currentSlideIndex != firstSlideIndex) {
+      var previousDotId = "#" + (currentSlideIndex);
+      var currentDotId = "#" + (currentSlideIndex + 1);
+      console.log("i'm here 1");
+      console.log("current slide index " + currentSlideIndex);
+      console.log("last slide index " + lastSlideIndex);
+      console.log("previous dot id " + previousDotId);
+      console.log("current dot id " + currentDotId);
+    } else if (direction === "forward" && currentSlideIndex == firstSlideIndex) {
+      var previousDotId = "#" + (lastSlideIndex + 1);
+      var currentDotId = "#" + (currentSlideIndex + 1);
+      console.log("i'm here 2");
+      console.log("current slide index " + currentSlideIndex);
+      console.log("last slide index " + lastSlideIndex);
+      console.log("previous dot id " + previousDotId);
+      console.log("current dot id " + currentDotId);
+    } else if (direction === "backward" && currentSlideIndex != firstSlideIndex) {
+      var previousDotId = "#" + (currentSlideIndex);
+      var currentDotId = "#" + (currentSlideIndex + 1);
+      console.log("i'm here 3");
+      console.log("current slide index " + currentSlideIndex);
+      console.log("last slide index " + lastSlideIndex);
+      console.log("previous dot id " + previousDotId);
+      console.log("current dot id " + currentDotId);
+    } else {
+      var previousDotId = "#" + firstSlideIndex;
+      var currentDotId = "#" + (currentSlideIndex + 1);
+      console.log("i'm here 4");
+      console.log("current slide " + currentSlideIndex);
+      console.log("last slide index " + lastSlideIndex);
+      console.log("previous dot id " + previousDotId);
+      console.log("current dot id " + currentDotId);
+    }
+    $(previousDotId).removeClass("is-selected");
+    $(currentDotId).addClass("is-selected");
+  }
 
   $('.next-icon').on("click", function() {
-    $($(".slide")[currentSlide]).hide();
+    $($(".slide")[currentSlideIndex]).hide();
     slideForward();
+    updateActiveDot("forward");
   })
 
   $('.previous-icon').on("click", function() {
-    $($(".slide")[currentSlide]).hide();
+    $($(".slide")[currentSlideIndex]).hide();
     slideBackward();
+    updateActiveDot("backward");
   })
 
   function slideForward() {
-    if (currentSlide == $('.slide').length - 1) {
-      currentSlide = 0;
+    if (currentSlideIndex == lastSlideIndex) {
+      currentSlideIndex = 0;
     } else {
-      currentSlide += 1;
+      currentSlideIndex += 1;
     }
-    $($(".slide")[currentSlide]).css("display", "inline-block");
+    $($(".slide")[currentSlideIndex]).css("display", "inline-block");
   }
 
   function slideBackward() {
-    if (currentSlide == 0) {
-      currentSlide = slides.length - 1;
+    if (currentSlideIndex == 0) {
+      currentSlideIndex = slides.length - 1;
     } else {
-      currentSlide -= 1;
+      currentSlideIndex -= 1;
     }
-    $($(".slide")[currentSlide]).css("display", "inline-block");
+    $($(".slide")[currentSlideIndex]).css("display", "inline-block");
   }
+
+  // On Document Load
+  ///////////////////
+  updateActiveDot("forward");
 
 });
