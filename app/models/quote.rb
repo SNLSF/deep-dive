@@ -1,3 +1,3 @@
 class Quote < ActiveRecord::Base
-	belongs_to :influencer
+	belongs_to :book
 end

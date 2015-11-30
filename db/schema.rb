@@ -50,9 +50,12 @@ ActiveRecord::Schema.define(version: 20151026025257) do
 
   create_table "quotes", force: :cascade do |t|
     t.text     "quotation"
+    t.integer  "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "quotes", ["book_id"], name: "index_quotes_on_book_id", using: :btree
 
   create_table "welcomes", force: :cascade do |t|
     t.datetime "created_at", null: false

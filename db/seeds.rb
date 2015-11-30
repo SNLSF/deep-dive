@@ -121,23 +121,80 @@ influencers.each do |x|
 	Influencer.create(name: x[0][:name], author: x[1][:author], image: x[2][:image])
 end
 
+quotes = [
+	[{quotation: "Feminists once talked of 'the sisterhood', but educated successful women today have fewer interests in common with other women than ever before."},
+	 {book_id: 1}],
+	[{quotation: "If you watch BET, you get the sense that the only way black people success is through professional sports, music, or marrying/fucking/being a baby mama of someone who is involved with professional sports or music."},
+	 {book_id: 2}],
+	[{quotation: "Our society still can't conceive that a relatively sane young woman would choose to go into sex work for any reason other than desperation."},
+	 {book_id: 3}],
+	[{quotation: "Today many disavow the term 'feminist', but often what is being rejected is a narrow and distorted version of feminism that bears little resemblance to the rich and varied feminist philosophies of the past."},
+	 {book_id: 4}],
+	[{quotation: "[This] is a theory of the divisions produced by society. These divisions are both dichotomous and comprehensive. If you are not in one group, you are in the other."},
+	 {book_id: 5}],
+	[{quotation: "Unfortunately because many black girls speak out unenlightened feminist thinkers have seen these speech acts as performances of power when they may more accurately simply be a reflection of different cultural values."},
+	 {book_id: 6}],
+	[{quotation: "Queer theorists emerged and critiqued the feminist movement for depicting women in an essentialist way, equating female bodies with only particular versions of feminitiy and not seeing possibilities for more fluid versions of gender."},
+	 {book_id: 7}],
+	[{quotation: "Anyone who wants her mate to be a true partner must treat him as an equal- and equally capable- partner."},
+	 {book_id: 8}],
+	[{quotation: "They were busy with self-education or training or taking action out of virtue. Philosophers should not merely describe the world, but change it."},
+	 {book_id: 9}],
+	[{quotation: "Protective labor legislation lies at a crossroads where women's history and legal history converge."},
+	 {book_id: 10}],
+	[{quotation: "It is a book about things that we traditionally associate with the image of woman	&mdash; the womb, the egg, the breast, the blood, the almighty clitoris	&mdash; and things that we don't	&mdash; movement, strength, aggression, and fury."},
+	 {book_id: 11}],
+	[{quotation: "...white feminists today... are often ridden with... tunnel-vision which simply does not see nonwhite experience or existence as precious or significant, unless in spasmodic, impotent guilt-reflexes, which have little or no long-term, continuing momentum or political usefulness."},
+	 {book_id: 12}],
+]
+
+quotes.each do |x|
+	Quote.create(quotation: x[0][:quotation], book_id: x[1][:book_id])
+end
+
 Book.find(1).influencers << Influencer.find(1)
+Book.find(1).quotes << Quote.find(1)
+
 Book.find(2).influencers << Influencer.find(2)
+Book.find(2).quotes << Quote.find(2)
+
 Book.find(3).influencers << [Influencer.find(3),
 														 Influencer.find(4),
 														 Influencer.find(5),
 														 Influencer.find(6)]
+Book.find(3).quotes << Quote.find(3)
+
 Book.find(4).influencers << [Influencer.find(7),
  														 Influencer.find(8), 
  														 Influencer.find(9)]
-Book.find(5).influencers << Influencer.find(10)
-Book.find(6).influencers << Influencer.find(11)
-Book.find(7).influencers << Influencer.find(12)
-Book.find(8).influencers << Influencer.find(13)
-Book.find(9).influencers << Influencer.find(14)
-Book.find(10).influencers << Influencer.find(15)
-Book.find(11).influencers << Influencer.find(16)
-Book.find(12).influencers << Influencer.find(17)
+Book.find(4).quotes << Quote.find(4)
 
-quotes = []
+Book.find(5).influencers << Influencer.find(10)
+Book.find(5).quotes << Quote.find(5)
+
+Book.find(6).influencers << Influencer.find(11)
+Book.find(6).quotes << Quote.find(6)
+
+Book.find(7).influencers << Influencer.find(12)
+Book.find(7).quotes << Quote.find(7)
+
+Book.find(8).influencers << Influencer.find(13)
+Book.find(8).quotes << Quote.find(8)
+
+Book.find(9).influencers << Influencer.find(14)
+Book.find(9).quotes << Quote.find(9)
+
+Book.find(10).influencers << Influencer.find(15)
+Book.find(10).quotes << Quote.find(10)
+
+Book.find(11).influencers << Influencer.find(16)
+Book.find(11).quotes << Quote.find(11)
+
+Book.find(12).influencers << Influencer.find(17)
+Book.find(12).quotes << Quote.find(12)
+
+
+
 events = []
+
+
