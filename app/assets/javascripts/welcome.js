@@ -18,35 +18,15 @@ $( document ).ready(function() {
     if (direction === "forward" && currentSlideIndex != firstSlideIndex) {
       var previousDotId = "#" + (currentSlideIndex);
       var currentDotId = "#" + (currentSlideIndex + 1);
-      console.log("i'm here 1");
-      console.log("current slide index " + currentSlideIndex);
-      console.log("last slide index " + lastSlideIndex);
-      console.log("previous dot id " + previousDotId);
-      console.log("current dot id " + currentDotId);
     } else if (direction === "forward" && currentSlideIndex == firstSlideIndex) {
       var previousDotId = "#" + (lastSlideIndex + 1);
       var currentDotId = "#" + (currentSlideIndex + 1);
-      console.log("i'm here 2");
-      console.log("current slide index " + currentSlideIndex);
-      console.log("last slide index " + lastSlideIndex);
-      console.log("previous dot id " + previousDotId);
-      console.log("current dot id " + currentDotId);
-    } else if (direction === "backward" && currentSlideIndex != firstSlideIndex) {
-      var previousDotId = "#" + (currentSlideIndex);
+    } else if (direction === "backward" && currentSlideIndex != lastSlideIndex) {
+      var previousDotId = "#" + (currentSlideIndex + 2);
       var currentDotId = "#" + (currentSlideIndex + 1);
-      console.log("i'm here 3");
-      console.log("current slide index " + currentSlideIndex);
-      console.log("last slide index " + lastSlideIndex);
-      console.log("previous dot id " + previousDotId);
-      console.log("current dot id " + currentDotId);
     } else {
-      var previousDotId = "#" + firstSlideIndex;
+      var previousDotId = "#" + (firstSlideIndex + 1);
       var currentDotId = "#" + (currentSlideIndex + 1);
-      console.log("i'm here 4");
-      console.log("current slide " + currentSlideIndex);
-      console.log("last slide index " + lastSlideIndex);
-      console.log("previous dot id " + previousDotId);
-      console.log("current dot id " + currentDotId);
     }
     $(previousDotId).removeClass("is-selected");
     $(currentDotId).addClass("is-selected");
