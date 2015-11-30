@@ -124,7 +124,7 @@ end
 quotes = [
 	[{quotation: "Feminists once talked of 'the sisterhood', but educated successful women today have fewer interests in common with other women than ever before."},
 	 {book_id: 1}],
-	[{quotation: "If you watch BET, you get the sense that the only way black people success is through professional sports, music, or marrying/fucking/being a baby mama of someone who is involved with professional sports or music."},
+	[{quotation: "If you watch BET, you get the sense that the only way black people succeed is through professional sports, music, or marrying/fucking/being a baby mama of someone who is involved with professional sports or music."},
 	 {book_id: 2}],
 	[{quotation: "Our society still can't conceive that a relatively sane young woman would choose to go into sex work for any reason other than desperation."},
 	 {book_id: 3}],
@@ -142,9 +142,9 @@ quotes = [
 	 {book_id: 9}],
 	[{quotation: "Protective labor legislation lies at a crossroads where women's history and legal history converge."},
 	 {book_id: 10}],
-	[{quotation: "It is a book about things that we traditionally associate with the image of woman	&mdash; the womb, the egg, the breast, the blood, the almighty clitoris	&mdash; and things that we don't	&mdash; movement, strength, aggression, and fury."},
+	[{quotation: "It is a book about things that we traditionally associate with the image of woman- the womb, the egg, the breast, the blood, the almighty clitoris- and things that we don't- movement, strength, aggression, and fury."},
 	 {book_id: 11}],
-	[{quotation: "...white feminists today... are often ridden with... tunnel-vision which simply does not see nonwhite experience or existence as precious or significant, unless in spasmodic, impotent guilt-reflexes, which have little or no long-term, continuing momentum or political usefulness."},
+	[{quotation: "I believe that white feminists today... are often ridden with white solipsism- not the consciously held belief that one race is inherently superior to all others, but a tunnel-vision which simply does not see nonwhite experience or existence as precious or significant, unless in spasmodic, impotent guilt-reflexes, which have little or no long-term, continuing momentum or political usefulness."},
 	 {book_id: 12}],
 ]
 
