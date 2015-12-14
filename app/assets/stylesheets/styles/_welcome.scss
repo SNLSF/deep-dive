@@ -11,7 +11,10 @@
 	font-size: 20px;
 	&:nth-of-type(2) {
 		margin-bottom: 0;
-	};
+	}
+	@include bp-small {
+		font-size: 18px;
+	}
 }
 
 .influencer-grid {
@@ -67,6 +70,9 @@
 		&:nth-of-type(1) {
 			display: inline-block;
 		}
+		@include bp-medium {
+			width: 80%;
+		}
 		@include bp-small {
 			background-color: transparent;
 			width: 63%;
@@ -87,6 +93,9 @@
 		margin: 10px;
 		padding: 1%;
 		vertical-align: middle;
+		@include bp-medium {
+			width: 58%;			
+		}
 		@include bp-small {
 			display: none;
 		}
