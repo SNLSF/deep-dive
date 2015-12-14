@@ -1,10 +1,16 @@
 body {
 	font-family: $bodyFont;
 	font-size: 18px;
+	@include bp-small {
+		font-size: 16px;
+	}
 }
 
 header {
 	padding: 60px 20px;
+	@include bp-small {
+		padding: 40px 20px;
+	}
 }
 
 footer {
@@ -26,7 +32,9 @@ section {
 	&:nth-child(even) {
 		background: $gray;
 	}
-
+	@include bp-small {
+		padding: 40px 0;
+	}
 }
 
 h1, h2, h3, h4 {
@@ -38,6 +46,9 @@ h1 {
 	opacity: .7;
 	color: $peach;
 	@include animation(changeAndFadeColors 20s infinite);
+	@include bp-small {
+		font-size: 50px;
+	}
 }
 
 a {

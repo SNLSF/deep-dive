@@ -16,7 +16,7 @@
 
 .influencer-grid {
 	width: 100%;
-	padding-left: 50px;
+	text-align: center;
 	
 	.influencer-grid__tile {
 		position: relative;
@@ -54,6 +54,7 @@
 	.next-icon, .previous-icon {
 		width: 50px;
 		color: $white;
+		cursor: pointer;
 	}
 
 	.slide { 
@@ -65,7 +66,12 @@
 		display: none;
 		&:nth-of-type(1) {
 			display: inline-block;
-		};
+		}
+		@include bp-small {
+			background-color: transparent;
+			width: 63%;
+			margin: 0;
+		}
 	}
 	
 	.book-carousel__cover { 
@@ -81,6 +87,9 @@
 		margin: 10px;
 		padding: 1%;
 		vertical-align: middle;
+		@include bp-small {
+			display: none;
+		}
 	}
 
 	.book-carousel__nav {
@@ -98,6 +107,9 @@
 		.is-selected {
 			background-color: $white;
 		}
+		@include bp-small {
+			display: none;
+		}
 	}
 
 }
@@ -110,5 +122,9 @@ section {
 		min-height: 400px;
 		background: image-url("book-1.jpeg") no-repeat center bottom;
 		background-size: cover;
+		@include bp-small {
+			padding-top: 60px;
+		}	
+
 	}
 }
