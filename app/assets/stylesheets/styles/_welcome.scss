@@ -1,3 +1,7 @@
+footer {
+	background-color: $gray;
+}
+
 .book__title {
 	font-weight: bold;
 	text-decoration: underline;
@@ -134,6 +138,35 @@ section {
 		@include bp-small {
 			padding-top: 60px;
 		}	
-
 	}
+	&.quotes {
+		padding: 0;
+		min-height: 100px;
+		.quote {
+			overflow: hidden;
+			padding: 0 1%;
+			text-overflow: ellipsis;
+			text-transform: uppercase;
+			white-space: nowrap;
+			font-size: 4em;
+			font-weight: bold;
+			&:hover {
+				cursor: pointer;
+			};
+			&:nth-of-type(even) {
+				color: $peach;
+				background-color: $transparentPeach;
+			};
+			&:nth-of-type(odd) {
+				color: $pink;
+				background-color: $transparentPink;
+			};
+		}
+		.quote__details {
+			color: $brown;
+			padding: 2%;
+			white-space: normal;
+			text-transform: none;
+		}
+	}	
 }

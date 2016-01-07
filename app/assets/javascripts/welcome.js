@@ -1,4 +1,7 @@
-$( document ).ready(function() {
+$(function(){
+
+  // influencer hover
+  // ================
 
   $('.influencer-grid__tile').hover(function() {
       $(this).find(':nth-child(2)').removeClass('hide');
@@ -6,14 +9,15 @@ $( document ).ready(function() {
       $(this).find(':nth-child(2)').addClass('hide');
   });
 
-  // Book Carousel
-  ////////////////
+  // book carousel
+  // =============
+
   var slides = $('.slide');
   var firstSlideIndex = 0;
   var lastSlideIndex = $('.slide').length - 1;
   var currentSlideIndex = 0;
-  var dots = $('.book-carousel__nav__dot');
 
+  // update dots that track which slide you are on
   function updateActiveDot(direction) {
     if (direction === "forward" && currentSlideIndex != firstSlideIndex) {
       var previousDotId = "#" + (currentSlideIndex);
@@ -32,18 +36,14 @@ $( document ).ready(function() {
     $(currentDotId).addClass("is-selected");
   }
 
+  // handle click for next icon on carousel
   $('.next-icon').on("click", function() {
     $($(".slide")[currentSlideIndex]).hide();
     slideForward();
     updateActiveDot("forward");
   })
 
-  $('.previous-icon').on("click", function() {
-    $($(".slide")[currentSlideIndex]).hide();
-    slideBackward();
-    updateActiveDot("backward");
-  })
-
+  // edge case for next slide when on last slide
   function slideForward() {
     if (currentSlideIndex == lastSlideIndex) {
       currentSlideIndex = 0;
@@ -53,6 +53,14 @@ $( document ).ready(function() {
     $($(".slide")[currentSlideIndex]).css("display", "inline-block");
   }
 
+  // handle click for previous icon on carousel
+  $('.previous-icon').on("click", function() {
+    $($(".slide")[currentSlideIndex]).hide();
+    slideBackward();
+    updateActiveDot("backward");
+  })
+
+  // edge case for previous slide when on first slide
   function slideBackward() {
     if (currentSlideIndex == 0) {
       currentSlideIndex = slides.length - 1;
@@ -62,8 +70,26 @@ $( document ).ready(function() {
     $($(".slide")[currentSlideIndex]).css("display", "inline-block");
   }
 
-  // On Document Load
-  ///////////////////
+  // toggle quote
+  // ============
+
+  $('.js-quote-drawer').each(function(index, quote) {
+    var $quote = $(quote);
+    var drawerId = $quote.attr('aria-controls');
+    var $drawer = $('#'+drawerId);
+    var $controls = $('[aria-controls="' + drawerId + '"]');
+
+    $quote.on('click', function(e) {
+      console.log('hi');
+      $drawer.toggleClass('hide');
+    })
+    
+  });
+
+  // update local UI
+  // ===============
+
   updateActiveDot("forward");
 
 });
+
