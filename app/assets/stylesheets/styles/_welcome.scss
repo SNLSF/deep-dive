@@ -140,16 +140,16 @@ section {
 		}	
 	}
 	&.quotes {
-		padding: 0;
 		min-height: 100px;
+		padding: 0;
 		.quote {
+			font-size: 4em;
+			font-weight: bold;
 			overflow: hidden;
 			padding: 0 1%;
 			text-overflow: ellipsis;
 			text-transform: uppercase;
 			white-space: nowrap;
-			font-size: 4em;
-			font-weight: bold;
 			&:hover {
 				cursor: pointer;
 			};
@@ -165,8 +165,8 @@ section {
 		.quote__details {
 			color: $brown;
 			padding: 2%;
-			white-space: normal;
 			text-transform: none;
+			white-space: normal;
 		}
 	}	
 }

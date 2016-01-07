@@ -79,11 +79,12 @@ $(function(){
     var $drawer = $('#'+drawerId);
     var $controls = $('[aria-controls="' + drawerId + '"]');
 
+    // come back to this
     $quote.on('click', function(e) {
       console.log('hi');
       $drawer.toggleClass('hide');
     })
-    
+
   });
 
   // update local UI
