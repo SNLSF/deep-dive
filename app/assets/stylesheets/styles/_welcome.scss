@@ -146,13 +146,17 @@ section {
 			font-size: 4em;
 			font-weight: bold;
 			overflow: hidden;
-			padding: 0 1%;
+			padding: 0.25% 25%;
 			text-overflow: ellipsis;
 			text-transform: uppercase;
 			white-space: nowrap;
 			&:hover {
 				cursor: pointer;
 			};
+			&.is-open {
+				white-space: inherit;
+				line-height: initial;
+			}
 			&:nth-of-type(even) {
 				color: $peach;
 				background-color: $transparentPeach;
@@ -161,12 +165,19 @@ section {
 				color: $pink;
 				background-color: $transparentPink;
 			};
+			@include bp-small {
+				font-size: 2.3em;
+				padding: 0 2%;
+			}
 		}
 		.quote__details {
 			color: $brown;
 			padding: 2%;
 			text-transform: none;
 			white-space: normal;
+			@include bp-large {	
+				padding: 2% 10%;
+			}
 		}
 	}	
 }

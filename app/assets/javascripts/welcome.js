@@ -74,14 +74,13 @@ $(function(){
   // ============
 
   $('.js-quote-drawer').each(function(index, quote) {
-    var $quote = $(quote);
-    var drawerId = $quote.attr('aria-controls');
-    var $drawer = $('#'+drawerId);
-    var $controls = $('[aria-controls="' + drawerId + '"]');
+    var $quote = $(quote),
+      drawerId = $quote.attr('aria-controls'),
+      $drawer = $('#'+drawerId),
+      $controls = $('[aria-controls="' + drawerId + '"]');
 
-    // come back to this
     $quote.on('click', function(e) {
-      console.log('hi');
+      $quote.toggleClass('is-open');
       $drawer.toggleClass('hide');
     })
 
