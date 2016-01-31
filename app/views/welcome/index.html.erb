@@ -41,7 +41,12 @@
 			<% @influencers.each do |influencer| %>
 		      <div class="influencer-grid__tile">
 		      	<img src="<%= influencer.image %>" alt="Author Portrait" class="influencer-grid__portrait" />
-		      	<div class="hide influencer-grid__bio text-center"><%= influencer.name %></div>
+		      	<div class="hide influencer-grid__bio text-center">
+		      		<%= influencer.name %><br>
+		      		<% influencer.books.each do |book| %>
+		      			<span class="book__title--hover"><%= book.title %></span><br>
+		      		<% end %>
+		      	</div>
 		      </div>
 			<% end %>
 		</div>
@@ -49,27 +54,52 @@
 </section>
 <section class="quotes">
 	<div class="quote js-quote-drawer" aria-controls="quote-1">
-		Leggings godard fanny pack art party craft beer intelligentsia.
+		In just a few minutes the film was able to connect her womanness with vulnerability, sensitivity, passion, security, danger, dependence, motherhood.
 		<div class="quote__details hide" id="quote-1">
-			<p>Truffaut yr bespoke, pour-over brunch craft beer hammock shabby chic narwhal cred fixie YOLO meditation. Small batch squid kickstarter crucifix, selfies photo booth roof party gluten-free 8-bit bespoke kale chips cronut. Raw denim 90's selvage, fashion axe occupy hammock meditation brunch. Synth celiac irony, tousled lo-fi next level migas skateboard. Microdosing stumptown asymmetrical, pabst bicycle rights narwhal letterpress freegan. Pour-over seitan salvia swag listicle, vice hashtag mlkshk. Chambray four dollar toast distillery chicharrones, chillwave beard post-ironic poutine blue bottle banh mi mixtape.</p>
+			<p>A chapter in Beyond the Pale describes how racial archetypes are leveraged in modern day propaganda. In this television broadcast, the Conservative Party drives home current environmental threats to society by drawing a parralel to a white woman and her baby in danger during a storm.</p>
+			<p>Vron goes on to say, "[t]hese qualities and attributes were suggested primarily by her gender, but her 'race', her 'whiteness', was also working in less visible ways to reinforce the racist and masculinist ideology that informed the making of the commercial." Since reading this book, I have picked up on these ideologies of whiteness, recognizing them in advertisements and movies alike. It sneaks into casual jokes all too often, but I feel fortunate in the sense that my current workplace is miraculously filled with [male] feminists who are quick to pick up on this. A conversation will hault and break down if a genderized comment comes into play- I simply sit back and watch the debate unfold, delighted that I, for once, am not the token feminist doing my part.</p>
+			<p>
+				<span class="quote__source">Excerpt From: Vron Ware &amp; Mikki Kendall. <a href="https://itun.es/us/z2xX2.l">"Beyond the Pale"</a></span>
+			</p>
 		</div>
 	</div>
 	<div class="quote js-quote-drawer" aria-controls="quote-2">
-		Pitchfork food truck yuccie, swag selvage banh mi put a bird on it typewriter seitan.
+		Their hearts were not heavy from overeating or drunkenness. Their minds were fully occupied with whatever they were currently working on.
 		<div class="quote__details hide" id="quote-2">
-			<p>Hammock venmo everyday carry, +1 aesthetic banh mi mlkshk brooklyn kitsch. Chillwave fingerstache street art master cleanse, wolf distillery truffaut offal cronut. Fashion axe microdosing ennui, dreamcatcher austin migas cold-pressed chambray flexitarian messenger bag cred tote bag venmo brunch. Twee brooklyn kitsch, semiotics vice banjo pug VHS ethical ugh organic meditation tofu vinyl. Humblebrag gochujang literally next level artisan, meh portland beard biodiesel mlkshk austin asymmetrical forage blue bottle banh mi. Cray brunch retro craft beer four loko plaid organic bicycle rights flannel. Small batch migas gastropub hashtag narwhal synth.</p>
+			<p>From prison, Nadya of Pussy Riot tells us of the people she worked with in her actionist years. Differentiating them from your more typical person living in Moscow, she praises their enthusiasm and work ethic, "they were busy with self-education or training or taking action out of virtue."</p>
+			<p>What I love about her letters from prison, is that her tone is contemplative, not defiant. It is rooted in introspection, not anger. "Philosophers should not merely describe the world, but change it. Happiness is to live by virtue. I am happy. Even here, sometimes."</p>
+			<p>
+				<span class="quote__source">Excerpt From: Pussy Riot. <a href="https://itun.es/us/8qzCH.l">"Pussy Riot!"</a></span>
+			</p>
 		</div>
 	</div>
 	<div class="quote js-quote-drawer" aria-controls="quote-3">
-		Franzen artisan occupy, beard street art fixie before they sold out tousled hoodie skateboard thundercats.
+		Be assertive, but not aggressive. Be feminine, but not too passive. Be sexually adventurous, but don’t alienate men with your sexual prowess. Be honest and open, but don’t overwhelm someone with too much personal information
 		<div class="quote__details hide" id="quote-3">
-			<p>Migas mumblecore bicycle rights art party, chartreuse brooklyn bitters. IPhone migas hoodie biodiesel gluten-free. Freegan fashion axe before they sold out, listicle literally hashtag meggings. Tilde plaid listicle yr. Pop-up fixie venmo, fingerstache microdosing try-hard messenger bag health goth iPhone schlitz. Viral kitsch mumblecore literally, artisan keytar pop-up disrupt etsy. Artisan biodiesel aesthetic, YOLO pour-over mustache asymmetrical cray yr wayfarers.</p>
+			<p>The ultimate paradox of sexual freedom is put on the table in Leslie Bell's book Hard to Get. A common byproduct of the confusion between contradicting societal influences is splitting, defined by Wikipedia as a behavior that "creates instability in relationships because one person can be viewed as either personified virtue or personified vice at different times, depending on whether they gratify the subject's needs or frustrate them."</p>
+			<p>This black and white mentality- perhaps not to the extent of splitting- can quickly deromanticize the experience of dating and finding a compatible partner. Balancing duality of virtue and vice- or conventional and non-normative - in oneself is one thing, but compound having to find a partner who can share this duality with you, and feelings of hopelessness and lonliness begin to surface.</p>
+			<p>I hope women put in the work to come to terms with what they want in life and in their relationsihps, so that by the time they hit thirty, they've passed a tipping point where only their own opinion matters and they can be liberated from the pressures Bell describes in her book. "[Women] are enjoined to remember that partnership and marriage are just around the corner, when they turn thirty, so the dating and experimentation of their twenties must result in a relationship, and must come to an end."</p>
+			<p>
+				<span class="quote__source">Excerpt From: Leslie Bell. <a href="https://itun.es/us/MDRDU.l">"Hard to Get"</a></span>
+			</p>
 		</div>
 	</div>
 	<div class="quote js-quote-drawer" aria-controls="quote-4">
-		Intelligentsia tacos sustainable, mlkshk chambray fixie franzen deep v keffiyeh lo-fi. 
+		At the start of a romance, it’s tempting for a woman to show a more classic “girlfriendy” side by volunteering to cook meals and take care of errands. And, suddenly, we’re back in 1955.
 		<div class="quote__details hide" id="quote-4">
-			<p>3 wolf moon keffiyeh flannel knausgaard blue bottle hashtag fashion axe, kombucha roof party chia direct trade. Chartreuse marfa green juice leggings bushwick, skateboard kombucha beard selvage meh stumptown umami post-ironic distillery. Sustainable blog synth mixtape chambray, ennui gentrify intelligentsia lumbersexual retro schlitz vinyl lo-fi. Put a bird on it photo booth blue bottle VHS, retro whatever cardigan keffiyeh food truck fanny pack polaroid vegan. Single-origin coffee tattooed PBR&B post-ironic ethical. Art party 3 wolf moon you probably haven't heard of them, put a bird on it hammock hoodie taxidermy ugh aesthetic bushwick echo park neutra bitters pabst sriracha. Affogato ennui hashtag, marfa vice keytar wolf asymmetrical photo booth street art mumblecore poutine austin meh.</p>
+			<p>This quote from Sheryl Sandberg hits on such a fresh wound, I can't even comment on it. I'd rather post the rest of the exerpt.
+				<blockquote>
+					<p>If a relationship begins in an unequal place, it is likely to get more unbalanced when and if children are added to the equation. Instead, use the beginning of a relationship to establish the division of labor, just as Nora Ephron’s dialogue in <i>When Harry Met Sally</i> reminds us:</p>
+					<p>HARRY: You take someone to the airport, it’s clearly the beginning of the relationship.
+					That’s why I have never taken anyone to the airport at the beginning of a relationship.</p>
+					<p>SALLY: Why?</p>
+					<p>HARRY: Because eventually things move on and you don’t take someone to the airport and 
+					I never wanted anyone to say to me, “How come you never take me to the airport anymore?</p>
+				</blockquote>
+			</p>
+			<p>
+				<span class="quote__source">Excerpt From: Sheryl Sandberg. <a href="https://itun.es/us/wni3H.l">"Lean In"</a></span>
+			</p>
 		</div>
 	</div>
 </section>

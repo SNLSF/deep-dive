@@ -51,6 +51,9 @@ footer {
 		padding: 10px;
 		text-transform: uppercase;
 		color: $white;
+		.book__title--hover {
+			text-transform: none;
+		};
 	}
 
 }
@@ -143,7 +146,7 @@ section {
 		min-height: 100px;
 		padding: 0;
 		.quote {
-			font-size: 4em;
+			font-size: 2em;
 			font-weight: bold;
 			overflow: hidden;
 			padding: 0.25% 25%;
@@ -165,18 +168,25 @@ section {
 				color: $pink;
 				background-color: $transparentPink;
 			};
+			.quote__details {
+				color: $brown;
+				padding: 2% 0;
+				text-transform: none;
+				white-space: normal;
+				@include bp-large {	
+					padding: 2% 10%;
+				}
+			}
+			.quote__source a {
+				color: $secondaryLink;
+				font-weight: bold;
+				&:hover {
+					color: $secondaryLinkHover;
+				};
+			}
 			@include bp-small {
 				font-size: 2.3em;
 				padding: 0 2%;
-			}
-		}
-		.quote__details {
-			color: $brown;
-			padding: 2%;
-			text-transform: none;
-			white-space: normal;
-			@include bp-large {	
-				padding: 2% 10%;
 			}
 		}
 	}	

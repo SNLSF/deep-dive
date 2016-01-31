@@ -10,10 +10,18 @@ $gray: #FCFCFC;
 $darkgray: #D9D9D9;
 $transparentWhite: rgba(255, 255, 255, 0.8);
 $transparentBlack: rgba(51, 51, 51, 0.8);
+$transparentBrown: rgba(76, 63, 57, 0.66);
 $transparentHotPink: rgba(245, 106, 214, 0.5);
 $transparentPink: rgba(255, 94, 143, 0.5);
 $transparentPeach: rgba(255, 210, 191, 0.5);
 
 $headerFont: 'Montserrat', sans-serif;
 $bodyFont: 'Lato', sans-serif;
+
+
+// ALIASES
+$primaryLink: $bluegreen;
+$primaryLinkHover: $peach;
+$secondaryLink: $brown;
+$secondaryLinkHover: $transparentBrown;
 
