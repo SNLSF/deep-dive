@@ -13,61 +13,61 @@ $(function(){
   // =============
 
   var slides = $('.slide');
-  var firstSlideIndex = 0;
-  var lastSlideIndex = $('.slide').length - 1;
-  var currentSlideIndex = 0;
+  var firstIndex = 0;
+  var lastIndex = $('.slide').length - 1;
+  var currIndex = 0;
 
   // update dots that track which slide you are on
-  function updateActiveDot(direction) {
-    if (direction === "forward" && currentSlideIndex != firstSlideIndex) {
-      var previousDotId = "#" + (currentSlideIndex);
-      var currentDotId = "#" + (currentSlideIndex + 1);
-    } else if (direction === "forward" && currentSlideIndex == firstSlideIndex) {
-      var previousDotId = "#" + (lastSlideIndex + 1);
-      var currentDotId = "#" + (currentSlideIndex + 1);
-    } else if (direction === "backward" && currentSlideIndex != lastSlideIndex) {
-      var previousDotId = "#" + (currentSlideIndex + 2);
-      var currentDotId = "#" + (currentSlideIndex + 1);
+  function updateActiveDot(dir) {
+    if (dir === "forward" && currIndex != firstIndex) {
+      var prevId = "#" + (currIndex),
+          currId = "#" + (currIndex + 1);
+    } else if (dir === "forward" && currIndex == firstIndex) {
+      var prevId = "#" + (lastIndex + 1),
+          currId = "#" + (currIndex + 1);
+    } else if (dir === "backward" && currIndex != lastIndex) {
+      var prevId = "#" + (currIndex + 2),
+          currId = "#" + (currIndex + 1);
     } else {
-      var previousDotId = "#" + (firstSlideIndex + 1);
-      var currentDotId = "#" + (currentSlideIndex + 1);
+      var prevId = "#" + (firstIndex + 1),
+          currId = "#" + (currIndex + 1);
     }
-    $(previousDotId).removeClass("is-selected");
-    $(currentDotId).addClass("is-selected");
+    $(prevId).removeClass("is-selected");
+    $(currId).addClass("is-selected");
   }
 
   // handle click for next icon on carousel
   $('.next-icon').on("click", function() {
-    $($(".slide")[currentSlideIndex]).hide();
+    $($(".slide")[currIndex]).hide();
     slideForward();
     updateActiveDot("forward");
   })
 
   // edge case for next slide when on last slide
   function slideForward() {
-    if (currentSlideIndex == lastSlideIndex) {
-      currentSlideIndex = 0;
+    if (currIndex == lastIndex) {
+      currIndex = 0;
     } else {
-      currentSlideIndex += 1;
+      currIndex += 1;
     }
-    $($(".slide")[currentSlideIndex]).css("display", "inline-block");
+    $($(".slide")[currIndex]).css("display", "inline-block");
   }
 
   // handle click for previous icon on carousel
   $('.previous-icon').on("click", function() {
-    $($(".slide")[currentSlideIndex]).hide();
+    $($(".slide")[currIndex]).hide();
     slideBackward();
     updateActiveDot("backward");
   })
 
   // edge case for previous slide when on first slide
   function slideBackward() {
-    if (currentSlideIndex == 0) {
-      currentSlideIndex = slides.length - 1;
+    if (currIndex == 0) {
+      currIndex = slides.length - 1;
     } else {
-      currentSlideIndex -= 1;
+      currIndex -= 1;
     }
-    $($(".slide")[currentSlideIndex]).css("display", "inline-block");
+    $($(".slide")[currIndex]).css("display", "inline-block");
   }
 
   // toggle quote
